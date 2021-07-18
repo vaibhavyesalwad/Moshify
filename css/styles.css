@@ -13,8 +13,8 @@ html {
 }
 
 body {
-  font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
+  font-family: Inter, Arial, Helvetica, sans-serif;
   line-height: 1.5;
 }
 
@@ -43,22 +43,30 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  html {
-    font-size: 80%;
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
 /* Links */
 
 .link-arrow {
-  text-decoration: none;
-  text-transform: capitalize;
   font-size: 2.5rem;
   font-weight: bold;
+  text-decoration: none;
+  text-transform: capitalize;
 }
 
 .link-arrow::after {
@@ -75,6 +83,40 @@ p {
 
 @media screen and (min-width: 1024px) {
   .link-arrow {
-    font-size: 1.8rem;
+    font-size: 2rem;
+  }
+}
+
+/* Badges */
+
+.badge {
+  border-radius: 20px;
+  font-size: 1.9rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+
+.badge--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.badge--secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+
+  .badge--small {
+    font-size: 1.2rem;
   }
 }
