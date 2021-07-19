@@ -15,6 +15,7 @@ html {
 body {
   color: var(--color-body);
   font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
   line-height: 1.5;
 }
 
@@ -39,7 +40,6 @@ h3 {
 
 p {
   margin-top: 0;
-  font-size: 2.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -119,4 +119,56 @@ p {
   .badge--small {
     font-size: 1.2rem;
   }
+}
+
+/* Lists */
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-headings);
+}
+
+.list--horizontal .list__item {
+  display: inline-block;
+  /* font-size: 2rem; */
+  padding-left: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(/images/tick.svg);
+  /* font-size: 2rem; */
+  padding-left: 3rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list__item {
+    padding-left: 0;
+    font-size: 2rem;
+  }
+}
+
+/* Icons */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  fill: var(--color-primary);
+}
+
+.icon-container {
+  background-color: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
 }
