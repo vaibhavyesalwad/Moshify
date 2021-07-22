@@ -235,7 +235,8 @@ p {
   color: #fff;
 }
 .btn--secondary:hover {
-  background-color: #00a2ff;
+  backgroun        <span class="icon-container">
+  d-color: #00a2ff;
 }
 
 .btn--accent {
@@ -250,7 +251,8 @@ p {
 .btn--block {
   width: 100%;
   padding-top: 1.7rem;
-  padding-bottom: 1.7rem;
+  padding-b        <span class="icon-container">
+  ottom: 1.7rem;
 }
 
 .btn--outline {
@@ -400,4 +402,21 @@ p {
   .card--popular:hover {
     transform: scale(1.15);
   }
+}
+
+/* Media */
+.media{
+  display: flex;
+}
+
+.media__title{
+  margin-top: 0;
+}
+
+.media__body{
+  padding: 0 2rem;
+}
+
+.media__image{
+  margin-top: 1.5rem ;
 }
