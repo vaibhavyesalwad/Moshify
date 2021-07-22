@@ -4,7 +4,7 @@
   --color-accent: #ff3400;
   --color-headings: #1b0760;
   --color-body: #918ca4;
-  --color-body-darker:#5c5577;
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
 }
 
@@ -43,7 +43,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 3.3rem;
 }
 
 p {
@@ -192,11 +192,9 @@ p {
   width: 40px;
 }
 
-.icon--white{
+.icon--white {
   fill: #fff;
 }
-
-
 
 .icon--primary {
   fill: var(--color-primary);
@@ -242,13 +240,17 @@ p {
   color: #fff;
 }
 .btn--secondary:hover {
-  backgroun        <span class="icon-container">
-  d-color: #00a2ff;
+  background-color: #00a2ff;
 }
 
 .btn--accent {
   background-color: var(--color-accent);
   color: #fff;
+}
+
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .btn--accent:hover {
@@ -258,8 +260,7 @@ p {
 .btn--block {
   width: 100%;
   padding-top: 1.7rem;
-  padding-b        <span class="icon-container">
-  ottom: 1.7rem;
+  padding-bottom: 1.7rem;
 }
 
 .btn--outline {
@@ -327,7 +328,7 @@ p {
   position: relative;
 }
 
-.card--package{
+.card--package {
   width: 50rem;
   height: 52rem;
 }
@@ -416,107 +417,106 @@ p {
 }
 
 /* Media */
-.media{
+.media {
   display: flex;
 }
 
-.media__title{
+.media__title {
   margin-top: 0;
 }
 
-.media__body{
+.media__body {
   padding: 0 2rem;
 }
 
-.media__image{
-  margin-top: 1.5rem ;
+.media__image {
+  margin-top: 1.5rem;
 }
 
 /* Quotes */
-.quote{
+.quote {
   font-size: 2.5rem;
   font-style: italic;
   line-height: 1.3;
-  color: var(--color-body-darker); 
+  color: var(--color-body-darker);
 }
 
-.quote__text::before{
+.quote__text::before {
   content: open-quote;
 }
 
-.quote__text::after{
+.quote__text::after {
   content: close-quote;
 }
 
-.quote__author{
-  font-size: 2.7  rem;
+.quote__author {
+  font-size: 2.7 rem;
   font-weight: 600;
   font-style: normal;
 }
 
-.quote__organization{
+.quote__organization {
   font-style: normal;
   color: var(--color-headings);
-  opacity: .5;
-  font-size: 2rem; 
+  opacity: 0.5;
+  font-size: 2rem;
 }
 
-.quote__line{
+.quote__line {
   position: relative;
   bottom: 15px;
 }
 
 @media screen and (min-width: 1024px) {
-  .quote{
+  .quote {
     font-size: 2rem;
   }
-  
-  .quote__author{
+
+  .quote__author {
     font-size: 2.2rem;
   }
 
-  .quote__organization{
+  .quote__organization {
     font-size: 1.8rem;
   }
 
-  .quote__line{
+  .quote__line {
     position: relative;
     bottom: 20px;
   }
 }
 
 /* Grids */
-.grid{
-  display:grid
+.grid {
+  display: grid;
 }
 
 @media screen and (min-width: 768px) {
-  .grid--1x2{
-  grid-template-columns: repeat(2, 1fr);
-  }  
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media screen and (min-width:1024px) {
-  .grid--1x3{
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
-  }  
-  
+  }
 }
 
 /* Testimonials */
-.testimonial{
+.testimonial {
   padding: 3rem;
 }
 
-.testimonial__image{
+.testimonial__image {
   position: relative;
 }
 
-.testimonial__image > img{
+.testimonial__image > img {
   width: 100%;
 }
 
-.testimonial__image >  .icon-container{
+.testimonial__image > .icon-container {
   position: absolute;
   background-color: tomato;
   right: -32px;
@@ -524,16 +524,56 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  .testimonial .quote, 
-  .testimonial .quote__author{
+  .testimonial .quote,
+  .testimonial .quote__author {
     font-size: 2.2rem;
   }
-  
-  .testimonial .quote{
+
+  .testimonial .quote {
     margin-left: 6rem;
   }
 
-  .testimonial{
+  .testimonial {
     max-width: 1024px;
+  }
+}
+
+/* Call-outs */
+.callout {
+  padding: 4rem;
+  border-radius: 4px;
+}
+
+.callout--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.callout__heading {
+  color: #fff;
+  margin-top: 0;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
   }
 }
