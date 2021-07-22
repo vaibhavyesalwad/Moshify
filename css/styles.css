@@ -192,6 +192,12 @@ p {
   width: 40px;
 }
 
+.icon--white{
+  fill: #fff;
+}
+
+
+
 .icon--primary {
   fill: var(--color-primary);
 }
@@ -313,14 +319,17 @@ p {
 
 /* Cards */
 .card {
-  width: 50rem;
-  height: 52rem;
   box-shadow: 0 0 20px 10px #f3f3f3;
-  margin: 3rem 2rem;
+  margin: 2rem;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.1s;
   position: relative;
+}
+
+.card--package{
+  width: 50rem;
+  height: 52rem;
 }
 
 .card__header {
@@ -366,7 +375,7 @@ p {
   padding: 1rem 2rem;
 }
 
-.card:hover {
+.card--package:hover {
   transform: scale(1.05);
 }
 
@@ -377,7 +386,7 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  .card {
+  .card--package {
     width: 34rem;
     height: 49rem;
   }
@@ -398,6 +407,7 @@ p {
 
   .card--popular {
     transform: scale(1.1);
+    margin: 4rem;
   }
 
   .card--popular:hover {
@@ -472,5 +482,58 @@ p {
   .quote__line{
     position: relative;
     bottom: 20px;
+  }
+}
+
+/* Grids */
+.grid{
+  display:grid
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2{
+  grid-template-columns: repeat(2, 1fr);
+  }  
+}
+
+@media screen and (min-width:1024px) {
+  .grid--1x3{
+    grid-template-columns: repeat(3, 1fr);
+  }  
+  
+}
+
+/* Testimonials */
+.testimonial{
+  padding: 3rem;
+}
+
+.testimonial__image{
+  position: relative;
+}
+
+.testimonial__image > img{
+  width: 100%;
+}
+
+.testimonial__image >  .icon-container{
+  position: absolute;
+  background-color: tomato;
+  right: -32px;
+  top: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote, 
+  .testimonial .quote__author{
+    font-size: 2.2rem;
+  }
+  
+  .testimonial .quote{
+    margin-left: 6rem;
+  }
+
+  .testimonial{
+    max-width: 1024px;
   }
 }
