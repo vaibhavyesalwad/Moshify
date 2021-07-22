@@ -100,8 +100,10 @@ p {
   border-radius: 20px;
   font-size: 1.9rem;
   font-weight: bold;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
   white-space: nowrap;
+  text-transform: uppercase;
+  margin: 1rem;
 }
 
 .badge--primary {
@@ -109,13 +111,36 @@ p {
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background-color: #126de4;
+}
+
 .badge--secondary {
   background-color: var(--color-secondary);
   color: #fff;
 }
 
+.card--secondary .badge--secondary {
+  background-color: #02cdf1;
+}
+
 .badge--small {
   font-size: 1.6rem;
+}
+
+.badge-popular {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--color-headings);
+  display: inline-block;
+  padding-right: 2rem;
+  padding-left: 1rem;
+  clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 3.5rem;
+  right: -1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -144,7 +169,7 @@ p {
 .list--tick {
   list-style-image: url(/images/tick.svg);
   /* font-size: 2rem; */
-  padding-left: 3rem;
+  padding-left: 4rem;
 }
 
 .list--tick .list__item {
@@ -224,6 +249,8 @@ p {
 
 .btn--block {
   width: 100%;
+  padding-top: 1.7rem;
+  padding-bottom: 1.7rem;
 }
 
 .btn--outline {
@@ -282,3 +309,95 @@ p {
 }
 
 /* Cards */
+.card {
+  width: 50rem;
+  height: 52rem;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  margin: 3rem 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.1s;
+  position: relative;
+}
+
+.card__header {
+  display: flex;
+  overflow: hidden;
+  height: 17.5rem;
+  flex-direction: column;
+  padding: 1.8rem 3.5rem;
+}
+
+.card--primary .card__header {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.card--secondary .card__header {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+.plan__billing_cycle,
+.plan__description {
+  font-size: 2rem;
+}
+
+.plan__price {
+  font-size: 4.5rem;
+  font-weight: 500;
+}
+
+.card .btn {
+  border: 2px solid var(--color-headings);
+  color: var(--color-headings);
+}
+
+.card .btn--block:hover {
+  background-color: var(--color-headings);
+  color: #fff;
+}
+
+.card__body {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.abc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 34rem;
+    height: 49rem;
+  }
+
+  .card__header {
+    padding: 2rem;
+  }
+
+  .plan__name,
+  .plan__billing_cycle,
+  .plan__description {
+    font-size: 1.8rem;
+  }
+
+  .abc {
+    flex-direction: row;
+  }
+
+  .card--popular {
+    transform: scale(1.1);
+  }
+
+  .card--popular:hover {
+    transform: scale(1.15);
+  }
+}
