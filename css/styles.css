@@ -23,7 +23,7 @@ html {
 body {
   color: var(--color-body);
   font-family: Inter, Arial, Helvetica, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 1.5;
 }
 
@@ -104,7 +104,6 @@ p {
   font-weight: bold;
   padding: 0.5rem 1.5rem;
   white-space: nowrap;
-  text-transform: uppercase;
   margin: 1rem;
 }
 
@@ -278,6 +277,13 @@ p {
   color: #fff;
 }
 
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -301,13 +307,14 @@ p {
   border-radius: 40px;
   border: 1px solid var(--color-border);
   display: flex;
-  width: 100vw;
+  width: 100%;
 }
 
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -726,5 +733,31 @@ p {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Domain-block */
+.domain-block .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.domain-block__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .domain-block__prices {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    max-width: 720px;
+    margin: 0 auto;
   }
 }
