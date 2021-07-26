@@ -412,7 +412,6 @@ p {
 
 .media__title {
   margin-top: 0;
-  color: #fff;
 }
 
 .media__body {
@@ -425,10 +424,11 @@ p {
 
 /* Quotes */
 .quote {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-style: italic;
   line-height: 1.3;
   color: var(--color-body-darker);
+  margin: 5rem 0 0 6rem;
 }
 
 .quote__text::before {
@@ -440,8 +440,8 @@ p {
 }
 
 .quote__author {
-  font-size: 2.7 rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -454,11 +454,30 @@ p {
 
 .quote__line {
   position: relative;
-  bottom: 15px;
+  bottom: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .quote__author {
+    font-size: 2rem;
+  }
+
+  .quote__organization {
+    font-size: 1.5rem;
+  }
+
+  .quote__line {
+    position: relative;
+    bottom: 22px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .quote {
+    line-height: 1.5;
+  }
+
+  .quote__text {
     font-size: 2rem;
   }
 
@@ -468,11 +487,6 @@ p {
 
   .quote__organization {
     font-size: 1.8rem;
-  }
-
-  .quote__line {
-    position: relative;
-    bottom: 20px;
   }
 }
 
@@ -511,21 +525,6 @@ p {
   background-color: tomato;
   right: -32px;
   top: 3rem;
-}
-
-@media screen and (min-width: 768px) {
-  .testimonial .quote,
-  .testimonial .quote__author {
-    font-size: 2.2rem;
-  }
-
-  .testimonial .quote {
-    margin-left: 6rem;
-  }
-
-  .testimonial {
-    max-width: 1024px;
-  }
 }
 
 /* Call-outs */
@@ -809,6 +808,10 @@ p {
 }
 
 /* Showcase Block */
+.block-showcase .media__title {
+  color: #fff;
+}
+
 .block-showcase__image > img {
   width: 100%;
 }
